@@ -7,7 +7,6 @@ from bs4 import BeautifulSoup
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
-CORS(app)  # Permet à l'artifact Claude d'appeler ce serveur
 
 # ⚠️ Régénère cette clé dans ton dashboard Bright Data après configuration
 BRIGHT_DATA_API_KEY = os.environ.get("BRIGHT_DATA_API_KEY", "")
