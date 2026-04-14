@@ -10,7 +10,7 @@ app = Flask(__name__)
 CORS(app)  # Permet à l'artifact Claude d'appeler ce serveur
 
 # ⚠️ Régénère cette clé dans ton dashboard Bright Data après configuration
-BRIGHT_DATA_API_KEY = "TA_NOUVELLE_CLÉ_ICI"
+BRIGHT_DATA_API_KEY = os.environ.get("BRIGHT_DATA_API_KEY", "")
 
 def scrape_url(url: str) -> str:
     """Scrape une URL via l'API REST Bright Data et retourne le texte brut."""
