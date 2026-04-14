@@ -7,7 +7,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)  # Permet à l'artifact Claude d'appeler ce serveur
+CORS(app, origins="*", allow_headers=["Content-Type"])
 
 # ⚠️ Régénère cette clé dans ton dashboard Bright Data après configuration
 BRIGHT_DATA_API_KEY = "04280fd6-9b0e-4f0d-bb25-0c62c9179e52"
