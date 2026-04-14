@@ -9,7 +9,7 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 # ⚠️ Régénère cette clé dans ton dashboard Bright Data après configuration
-BRIGHT_DATA_API_KEY = os.environ.get("BRIGHT_DATA_API_KEY", "")
+BRIGHT_DATA_API_KEY = os.environ.get("BRIGHT_DATA_API_KEY", "").strip()
 
 def scrape_url(url: str) -> str:
     """Scrape une URL via l'API REST Bright Data et retourne le texte brut."""
